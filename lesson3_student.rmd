@@ -4,7 +4,12 @@ Lesson 3
 ***
 
 ### What to Do First?
-Notes:
+Notes: Reading in data
+
+```{r}
+facebook <- read.delim('pseudo_facebook.tsv')
+```
+
 
 ***
 
@@ -12,7 +17,8 @@ Notes:
 Notes:
 
 ```{r Pseudo-Facebook User Data}
-
+str(facebook)
+names(facebook)
 ```
 
 ***
@@ -21,8 +27,8 @@ Notes:
 Notes:
 
 ```{r Histogram of Users\' Birthdays}
-install.packages('ggplot2')
-library(ggplot2)
+qplot(data = facebook, x = dob_day) +
+  scale_x_continuous(breaks = 1:31)
 ```
 
 ***
