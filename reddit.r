@@ -6,12 +6,15 @@ dim(reddit)
 table(reddit$id)
 table(reddit$employment.status)
 table(reddit$age.range)
+table(reddit$children)
 
 # level
+levels(reddit$employment.status)
 levels(reddit$age.range)
+levels(reddit$children)
 
 # using ggplot and qplot
-qplot(data = reddit, x = income.range)
+qplot(data = reddit, x = reddit$income.range)
 
 # ordering variables using factor method
 ?factor()

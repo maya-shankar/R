@@ -24,9 +24,10 @@ names(facebook)
 ***
 
 ### Histogram of Users' Birthdays
-Notes:
+Notes: Use the scale_as_continuous() with breaks to have specified x-axis intervals.
 
 ```{r Histogram of Users\' Birthdays}
+library(ggplot2)
 qplot(data = facebook, x = dob_day) +
   scale_x_continuous(breaks = 1:31)
 ```
