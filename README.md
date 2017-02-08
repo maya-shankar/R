@@ -1,5 +1,5 @@
 # R
-Working my way through Udacity's Data Analysis with R course.
+Working my way through Udacity's [Data Analysis with R](https://www.udacity.com/course/data-analysis-with-r--ud651) course.
 Related learning [blog posts](https://learningonleaves.wordpress.com/category/r).
 
 ### Usage:
