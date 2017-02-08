@@ -71,7 +71,7 @@ Notes:
 
 ```
 
-#### Let’s take another look at our plot. What stands out to you here?
+#### Let's take another look at our plot. What stands out to you here?
 Response:
 
 ***
