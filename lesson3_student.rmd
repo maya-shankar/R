@@ -68,7 +68,7 @@ Notes:
 Notes:
 
 ```{r Faceting}
-
+qplot(data = facebook, x = dob_day) + scale_x_continuous(breaks = 1:31) + facet_wrap(~dob_month, ncol = 3)
 ```
 
 #### Let's take another look at our plot. What stands out to you here?
@@ -83,7 +83,7 @@ Notes:
 
 ### Moira's Outlier
 Notes:
-#### Which case do you think applies to Moira’s outlier?
+#### Which case do you think applies to Moira's outlier?
 Response:
 
 ***
@@ -94,7 +94,9 @@ Notes:
 #### What code would you enter to create a histogram of friend counts?
 
 ```{r Friend Count}
-
+names(facebook)
+qplot(data = facebook, x = friend_count)
+max(facebook$friend_count)
 ```
 
 #### How is this plot similar to Moira's first plot?
@@ -106,7 +108,8 @@ Response:
 Notes:
 
 ```{r Limiting the Axes}
-
+qplot(data = facebook, x = friend_count, binwidth = 25) + scale_x_continuous(breaks = seq(0, 1000, 50), limits = c(0, 1000))
+qplot(data = facebook, x = friend_count) + scale_x_continuous(limits = c(0, 1000))
 ```
 
 ### Exploring with Bin Width
@@ -121,9 +124,10 @@ Notes:
 ```{r Faceting Friend Count}
 # What code would you add to create a facet the histogram by gender?
 # Add it to the code below.
-qplot(x = friend_count, data = pf, binwidth = 10) +
+qplot(x = friend_count, data = facebook, binwidth = 10) +
   scale_x_continuous(limits = c(0, 1000),
-                     breaks = seq(0, 1000, 50))
+                     breaks = seq(0, 1000, 50)) +
+  facet_wrap(~gender, ncol = 1)
 ```
 
 ***
